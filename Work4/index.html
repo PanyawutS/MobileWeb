@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work4</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <style>
+      body { margin: 0; }
+      a-scene { width: 100vw; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Panorama 360 background -->
+      <a-sky src="assets/Sky4.jpg" rotation="0 -95 30"></a-sky>
+      
+      <!-- Personal Images -->
+      <a-image src="assets/Me.jpg" position="0 1.5 -5" width="2" height="2" animation="property: scale; to: 1.1 1.1 1.1; dir: alternate; dur: 2000; loop: true"></a-image>
+      <a-image src="assets/Me.jpg" position="0 1.5 -10" width="2" height="2" animation="property: scale; to: 1.1 1.1 1.1; dir: alternate; dur: 2000; loop: true"></a-image>
+      <a-image src="assets/Uni.jpg" position="0 1.5 -15" width="2" height="2" animation="property: scale; to: 1.1 1.1 1.1; dir: alternate; dur: 2000; loop: true"></a-image>
+      <a-image src="assets/CP.jpg" position="0 1.5 -20" width="2" height="2" animation="property: scale; to: 1.1 1.1 1.1; dir: alternate; dur: 2000; loop: true"></a-image>
+
+      <!-- Cat with rotation -->
+      <a-entity gltf-model="assets/Cat.glb" position="0 0 -30" scale="1 1 1"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+      </a-entity>
+
+      <!-- Food with rotation -->
+      <a-entity gltf-model="assets/Breakfast.glb" position="0 0 -50" scale="15 15 15"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+      </a-entity>
+
+      <!-- Text with Jump animation -->
+      <a-text value="Hello World!!" position="-0.6 2.6 -5" color="black"
+        animation="property: position; dir: alternate; to: -0.6 3 -5; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+      <a-text value="653380138-3 Panyawut Saengdaeng" position="-1.66 2.6 -10" color="black"
+        animation="property: position; dir: alternate; to: -1.66 3 -10; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+      <a-text value="KhonKean University" position="-1 2.6 -15" color="black"
+        animation="property: position; dir: alternate; to: -1 3 -15; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+      <a-text value="College of Computing" position="-1.1 2.6 -20" color="black"
+        animation="property: position; dir: alternate; to: -1.1 3 -20; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+      <a-text value="I like Cat" position="-0.3 2.6 -28" color="black"
+        animation="property: position; dir: alternate; to: -0.3 3 -28; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+      <a-text value="I like to eat" position="-0.6 2.6 -48" color="black"
+        animation="property: position; dir: alternate; to: -0.6 3 -48; loop: true; dur: 1000; easing: ease-in-out"></a-text>
+
+      <!-- Background music -->
+      <a-assets>
+        <audio id="background-music" src="assets/music.mp3" preload="auto"></audio>
+      </a-assets>
+      <a-sound 
+        src="#background-music" 
+        autoplay="true" 
+        loop="true" 
+        position="0 1.6 0" 
+        volume="1">
+      </a-sound>
+
+      <!-- Camera -->
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
