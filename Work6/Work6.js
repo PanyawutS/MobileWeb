@@ -105,12 +105,12 @@ class App extends React.Component {
 
   edit(std) {
     this.setState({
-        stdid: std.id,
-        stdtitle: std.title || "",
-        stdfname: std.fname || "",
-        stdlname: std.lname || "",
-        stdemail: std.email || "",
-        stdphone: std.phone || ""
+      stdid: std.id,
+      stdtitle: std.title || "",
+      stdfname: std.fname || "",
+      stdlname: std.lname || "",
+      stdemail: std.email || "",
+      stdphone: std.phone || "",
     });
   }
 
@@ -298,6 +298,7 @@ function LoginBox(props) {
   }
 }
 
+console.log("API Key:", firebaseConfig.apiKey);
 // ใช้ config จาก เว็บ Firebase: Project Setting
 const firebaseConfig = {
   apiKey: "AIzaSyAxk8IUqqdzXt4WMaMI5_TajQsIMbYzAj0",
