@@ -298,7 +298,6 @@ function LoginBox(props) {
   }
 }
 
-console.log("API Key:", firebaseConfig.apiKey);
 // ใช้ config จาก เว็บ Firebase: Project Setting
 const firebaseConfig = {
   apiKey: "AIzaSyAxk8IUqqdzXt4WMaMI5_TajQsIMbYzAj0",
